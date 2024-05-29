@@ -23,7 +23,6 @@ jobs:
         ssh -o StrictHostKeyChecking=no ${{ secrets.USERNAME }}@${{ secrets.HOST }} "
         cd /home/ubuntu/Action_Tutorial
         git pull
-        docker-compose build
-        docker-compose down
-        docker-compose up -d
+        sudo docker-compose down
+        sudo docker-compose up -d
         "
